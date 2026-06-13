@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">Zwanze 1070</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-purple-50 text-slate-900">
+
+<header class="bg-purple-950 text-white shadow-sm">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <a href="/" class="text-2xl font-bold tracking-tight">
+            Zwanze 1070
+        </a>
+
+        <nav class="flex gap-6 text-sm font-medium">
+            <a href="/" class="hover:text-purple-200">Evenementen</a>
+            <a href="/events/new" class="hover:text-purple-200">Nieuw evenement</a>
+            <a href="/about" class="hover:text-purple-200">Over ons</a>
+            <a href="/contact" class="hover:text-purple-200">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="mx-auto max-w-6xl px-6 py-12">
+    <section class="overflow-hidden rounded-3xl border border-purple-100 bg-white shadow-sm">
+        <div class="grid gap-8 p-10 md:grid-cols-2 md:items-center">
+
+            <div>
+                <p class="text-sm font-semibold uppercase tracking-wide text-purple-700">
+                    Anderlechtse NGO
+                </p>
+
+                <h1 class="mt-4 text-4xl font-bold leading-tight text-purple-950">
+                    Samen bouwen aan een sterker Anderlecht.
+                </h1>
+
+                <p class="mt-5 text-lg leading-8 text-slate-600">
+                    Zwanze 1070 organiseert lokale evenementen en ondersteunt mensen
+                    die het minder breed hebben. We brengen buren, partners en vrijwilligers
+                    samen in het hart van Anderlecht.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="/events/new"
+                       class="rounded-xl bg-purple-800 px-5 py-3 font-medium text-white shadow-sm hover:bg-purple-900">
+                        Nieuw evenement toevoegen
+                    </a>
+
+                    <a href="/about"
+                       class="rounded-xl border border-purple-200 px-5 py-3 font-medium text-purple-900 hover:bg-purple-100">
+                        Meer over ons
+                    </a>
+                </div>
+            </div>
+
+            <div class="rounded-3xl bg-purple-100 p-8">
+                <h2 class="text-2xl font-bold text-purple-950">
+                    Wat vind je hier?
+                </h2>
+
+                <ul class="mt-6 space-y-4 text-slate-700">
+                    <li class="rounded-2xl bg-white p-4 shadow-sm">
+                        Lokale activiteiten en gemeenschapsevenementen.
+                    </li>
+                    <li class="rounded-2xl bg-white p-4 shadow-sm">
+                        Samenwerkingen met partners en buurtorganisaties.
+                    </li>
+                    <li class="rounded-2xl bg-white p-4 shadow-sm">
+                        Een laagdrempelige manier om contact op te nemen.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer class="border-t border-purple-100 bg-white">
+    <div class="mx-auto max-w-6xl px-6 py-5 text-sm text-slate-500">
+        © 2026 Zwanze 1070. Alle rechten voorbehouden.
+    </div>
+</footer>
+
+</body>
+</html>w
