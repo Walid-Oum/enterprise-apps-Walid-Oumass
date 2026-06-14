@@ -23,9 +23,9 @@ public class EventController {
     }
 
     @GetMapping("/{id}")
-    public String details(@PathVariable Long id,  Model model){
+    public String details(@PathVariable Long id, Model model) {
 
-        Event event = eventRepository.findById(id).orElseThrow(()->new ResponseStatusException(
+        Event event = eventRepository.findById(id).orElseThrow(() -> new ResponseStatusException(
                 HttpStatus.NOT_FOUND,
                 "evenement niet gevonden"
         ));
@@ -36,7 +36,7 @@ public class EventController {
     }
 
     @GetMapping("/new")
-    public String newEventForm(Model model){
+    public String newEventForm(Model model) {
         model.addAttribute("pageTitle", "Nieuw Evenement");
         model.addAttribute("event", new Event());
         //voor dropdown opties
