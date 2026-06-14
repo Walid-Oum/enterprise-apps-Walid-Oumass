@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<header th:fragment="navbar(activePage)" class="bg-purple-950 text-white shadow-sm">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+
+        <a th:href="@{/}" class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-lg font-black text-purple-950">
+                Z
+            </div>
+
+            <div>
+                <p class="text-2xl font-bold tracking-tight">
+                    Zwanze 1070
+                </p>
+                <p class="text-xs text-purple-200">
+                    Samen voor Anderlecht
+                </p>
+            </div>
+        </a>
+
+        <nav class="flex items-center gap-6 text-sm font-medium">
+            <a th:href="@{/}"
+               th:classappend="${activePage == 'events'} ? 'text-purple-200' : 'text-white'"
+               class="hover:text-purple-200">
+                Evenementen
+            </a>
+
+            <a th:href="@{/events/new}"
+               th:classappend="${activePage == 'new'} ? 'bg-white text-purple-950' : 'bg-purple-800 text-white'"
+               class="rounded-xl px-4 py-2 shadow-sm hover:bg-white hover:text-purple-950">
+                Nieuw evenement
+            </a>
+
+            <a th:href="@{/about}"
+               th:classappend="${activePage == 'about'} ? 'text-purple-200' : 'text-white'"
+               class="hover:text-purple-200">
+                Over ons
+            </a>
+
+            <a th:href="@{/contact}"
+               th:classappend="${activePage == 'contact'} ? 'text-purple-200' : 'text-white'"
+               class="hover:text-purple-200">
+                Contact
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+<footer th:fragment="footer" class="border-t border-purple-100 bg-white">
+    <div class="mx-auto grid max-w-6xl gap-6 px-6 py-8 text-sm text-slate-500 md:grid-cols-3">
+
+        <div>
+            <p class="font-bold text-purple-950">Zwanze 1070</p>
+            <p class="mt-2 leading-6">
+                Een fictieve Anderlechtse NGO voor lokale solidariteit,
+                gemeenschapsopbouw en buurtinitiatieven.
+            </p>
+        </div>
+
+        <div>
+            <p class="font-semibold text-slate-700">Adres</p>
+            <p class="mt-2 leading-6">
+                Campus Kaai<br>
+                Nijverheidskaai 170<br>
+                1070 Anderlecht
+            </p>
+        </div>
+
+        <div class="md:text-right">
+            <p class="font-semibold text-slate-700">Contact</p>
+            <p class="mt-2 leading-6">
+                info@zwanze1070.be<br>
+                © 2026 Zwanze 1070
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

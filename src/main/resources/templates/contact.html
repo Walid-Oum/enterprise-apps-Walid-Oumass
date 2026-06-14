@@ -8,20 +8,7 @@
 
 <body class="min-h-screen bg-purple-50 text-slate-900">
 
-<header class="bg-purple-950 text-white shadow-sm">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="/" class="text-2xl font-bold tracking-tight">
-            Zwanze 1070
-        </a>
-
-        <nav class="flex gap-6 text-sm font-medium">
-            <a href="/" class="hover:text-purple-200">Evenementen</a>
-            <a href="/events/new" class="hover:text-purple-200">Nieuw evenement</a>
-            <a href="/about" class="hover:text-purple-200">Over ons</a>
-            <a href="/contact" class="hover:text-purple-200">Contact</a>
-        </nav>
-    </div>
-</header>
+<div th:replace="~{fragments :: navbar('contact')}"></div>
 
 <main class="mx-auto max-w-3xl px-6 py-12">
 
@@ -31,18 +18,18 @@
         </p>
 
         <h1 class="mt-3 text-4xl font-bold text-purple-950">
-            Neem contact op met Zwanze 1070
+            Stuur ons een bericht
         </h1>
 
         <p class="mt-4 text-slate-600">
-            Heb je een vraag, voorstel of bericht voor onze administrators?
-            Vul het formulier hieronder in.
+            Heb je een vraag, een idee voor een activiteit of wil je graag meehelpen?
+            Laat hier iets achter. We bekijken je bericht zo snel mogelijk.
         </p>
 
         <div th:if="${sent}" class="mt-6 rounded-2xl border border-green-200 bg-green-50 p-5 text-green-800">
-            Bedankt voor je bericht
+            Bedankt
             <span th:if="${name}" th:text="${name}">naam</span>.
-            We nemen zo snel mogelijk contact op.
+            je bericht is goed aangekomen. We nemen binnenkort contact op.
         </div>
 
         <form th:action="@{/contact}" method="post" class="mt-8 space-y-6">
@@ -112,11 +99,7 @@
 
 </main>
 
-<footer class="border-t border-purple-100 bg-white">
-    <div class="mx-auto max-w-6xl px-6 py-5 text-sm text-slate-500">
-        © 2026 Zwanze 1070. Alle rechten voorbehouden.
-    </div>
-</footer>
+<div th:replace="~{fragments :: footer}"></div>
 
 </body>
 </html>

@@ -8,20 +8,7 @@
 
 <body class="min-h-screen bg-purple-50 text-slate-900">
 
-<header class="bg-purple-950 text-white shadow-sm">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="/" class="text-2xl font-bold tracking-tight">
-            Zwanze 1070
-        </a>
-
-        <nav class="flex gap-6 text-sm font-medium">
-            <a href="/" class="hover:text-purple-200">Evenementen</a>
-            <a href="/events/new" class="hover:text-purple-200">Nieuw evenement</a>
-            <a href="/about" class="hover:text-purple-200">Over ons</a>
-            <a href="/contact" class="hover:text-purple-200">Contact</a>
-        </nav>
-    </div>
-</header>
+<div th:replace="~{fragments :: navbar('about')}"></div>
 
 <main class="mx-auto max-w-5xl px-6 py-12">
 
@@ -35,10 +22,9 @@
         </h1>
 
         <p class="mt-5 text-lg leading-8 text-slate-600">
-            Zwanze 1070 is een Anderlechtse NGO die zich inzet voor gemeenschapsbouwen,
-            lokale solidariteit en hulp aan mensen die het minder breed hebben.
-            Via evenementen, buurtinitiatieven en samenwerkingen met partners willen we
-            inwoners dichter bij elkaar brengen.
+            Zwanze 1070 is een fictieve Anderlechtse NGO die mensen dichter bij elkaar wil brengen.
+            We zetten ons in voor buurtwerking, solidariteit en praktische hulp voor wie dat nodig heeft.
+            Vanuit Anderlecht organiseren we activiteiten samen met vrijwilligers en partners uit de buurt.
         </p>
 
         <div class="mt-10 grid gap-6 md:grid-cols-3">
@@ -69,8 +55,8 @@
                     Missie
                 </h2>
                 <p class="mt-3 text-slate-700">
-                    We bouwen bruggen tussen bewoners, vrijwilligers en organisaties
-                    in Anderlecht.
+                    We willen een plek creëren waar mensen elkaar sneller vinden,
+                    elkaar helpen en samen iets positiefs doen voor de buurt.
                 </p>
             </div>
 
@@ -82,22 +68,21 @@
             </h2>
 
             <p class="mt-4 leading-8 text-slate-700">
-                blabla
+                Zwanze 1070 organiseert ontmoetingsmomenten, inzamelacties en activiteiten
+                voor mensen uit de buurt. We werken samen met vrijwilligers en lokale partners,
+                zodat hulp dichtbij voelt en mensen sneller de weg vinden naar elkaar.
             </p>
 
             <p class="mt-4 leading-8 text-slate-700">
-                blablabla
+                Voor dit prototype gebruiken we voorlopige inhoud. Later kan deze tekst vervangen
+                worden door de definitieve informatie van de organisatie.
             </p>
         </div>
     </section>
 
 </main>
 
-<footer class="border-t border-purple-100 bg-white">
-    <div class="mx-auto max-w-6xl px-6 py-5 text-sm text-slate-500">
-        © 2026 Zwanze 1070. Alle rechten voorbehouden.
-    </div>
-</footer>
+<div th:replace="~{fragments :: footer}"></div>
 
 </body>
 </html>

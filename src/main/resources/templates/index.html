@@ -8,20 +8,7 @@
 
 <body class="min-h-screen bg-purple-50 text-slate-900">
 
-<header class="bg-purple-950 text-white shadow-sm">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="/" class="text-2xl font-bold tracking-tight">
-            Zwanze 1070
-        </a>
-
-        <nav class="flex gap-6 text-sm font-medium">
-            <a href="/" class="hover:text-purple-200">Evenementen</a>
-            <a href="/events/new" class="hover:text-purple-200">Nieuw evenement</a>
-            <a href="/about" class="hover:text-purple-200">Over ons</a>
-            <a href="/contact" class="hover:text-purple-200">Contact</a>
-        </nav>
-    </div>
-</header>
+<div th:replace="~{fragments :: navbar('events')}"></div>
 
 <main class="mx-auto max-w-6xl px-6 py-12">
 
@@ -30,7 +17,7 @@
 
             <div>
                 <p class="text-sm font-semibold uppercase tracking-wide text-purple-700">
-                    Anderlechtse NGO
+                    Lokale hulp in Anderlecht
                 </p>
 
                 <h1 class="mt-4 text-4xl font-bold leading-tight text-purple-950">
@@ -38,9 +25,9 @@
                 </h1>
 
                 <p class="mt-5 text-lg leading-8 text-slate-600">
-                    Zwanze 1070 organiseert lokale evenementen en ondersteunt mensen
-                    die het minder breed hebben. We brengen buren, partners en vrijwilligers
-                    samen in het hart van Anderlecht.
+                    Zwanze 1070 brengt buurtbewoners, vrijwilligers en lokale partners samen.
+                    We organiseren activiteiten en bieden steun aan mensen die het wat moeilijker hebben.
+                    Alles vertrekt vanuit één idee: niemand hoeft er alleen voor te staan.
                 </p>
 
                 <div class="mt-8 flex flex-wrap gap-4">
@@ -63,13 +50,13 @@
 
                 <ul class="mt-6 space-y-4 text-slate-700">
                     <li class="rounded-2xl bg-white p-4 shadow-sm">
-                        Lokale activiteiten en gemeenschapsevenementen.
+                        Activiteiten voor mensen uit de buurt.
                     </li>
                     <li class="rounded-2xl bg-white p-4 shadow-sm">
-                        Samenwerkingen met partners en buurtorganisaties.
+                        Hulpacties samen met lokale partners.
                     </li>
                     <li class="rounded-2xl bg-white p-4 shadow-sm">
-                        Een laagdrempelige manier om contact op te nemen.
+                        Een eenvoudige manier om vragen te stellen of mee te helpen.
                     </li>
                 </ul>
             </div>
@@ -86,6 +73,9 @@
                 <h2 class="mt-2 text-3xl font-bold text-purple-950">
                     Laatste 10 evenementen
                 </h2>
+                <p class="mt-3 max-w-2xl text-slate-600">
+                    Hieronder vind je de meest recente activiteiten van Zwanze 1070 en onze partners.
+                </p>
             </div>
 
             <a href="/events/new"
@@ -134,11 +124,7 @@
 
 </main>
 
-<footer class="border-t border-purple-100 bg-white">
-    <div class="mx-auto max-w-6xl px-6 py-5 text-sm text-slate-500">
-        © 2026 Zwanze 1070. Alle rechten voorbehouden.
-    </div>
-</footer>
+<div th:replace="~{fragments :: footer}"></div>
 
 </body>
 </html>
