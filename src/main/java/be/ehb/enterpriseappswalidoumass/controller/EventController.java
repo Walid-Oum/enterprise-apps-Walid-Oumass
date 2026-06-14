@@ -3,12 +3,12 @@ package be.ehb.enterpriseappswalidoumass.controller;
 import be.ehb.enterpriseappswalidoumass.model.Event;
 import be.ehb.enterpriseappswalidoumass.repository.EventRepository;
 import be.ehb.enterpriseappswalidoumass.repository.LocationRepository;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 @Controller
@@ -42,5 +42,22 @@ public class EventController {
         //voor dropdown opties
         model.addAttribute("locations", locationRepository.findAll());
         return "new-event";
+    }
+
+
+    @PostMapping("/new")
+    public String saveNewEvent(
+            @Valid @ModelAttribute("event") Event event,
+            BindingResult bindingResult,
+            Model model
+    ) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("pageTitle", "Nieuw evenement");
+            model.addAttribute("locations", locationRepository.findAll());
+            return "new-event";
+        }
+
+        eventRepository.save(event);
+        return "redirect:/";
     }
 }
