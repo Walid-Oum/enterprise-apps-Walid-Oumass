@@ -21,4 +21,10 @@ public class PageController {
         return "index";
     }
 
+    @GetMapping("/about")
+    public String about(Model model) {
+        model.addAttribute("pageTitle", "Over Zwanze 1070");
+        return "about";
+    }
+
 }
