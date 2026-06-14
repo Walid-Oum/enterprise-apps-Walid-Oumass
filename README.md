@@ -202,7 +202,8 @@ De code werd door mij geïmplementeerd, aangepast en getest. AI werd gebruikt al
 
 ## Auteur
 
-Naam: Walid Oumass
-Project: Enterprise Applications
-Website: Zwanze 1070
-Repository: https://github.com/Walid-Oum/enterprise-apps-Walid-Oumass
+- Naam: Walid Oumass
+- Project: Enterprise Applications
+- Website: Zwanze 1070
+- Repository: https://github.com/Walid-Oum/enterprise-apps-Walid-Oumass
+
