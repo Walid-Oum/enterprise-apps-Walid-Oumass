@@ -25,10 +25,7 @@ public class EventController {
     @GetMapping("/{id}")
     public String details(@PathVariable Long id, Model model) {
 
-        Event event = eventRepository.findById(id).orElseThrow(() -> new ResponseStatusException(
-                HttpStatus.NOT_FOUND,
-                "evenement niet gevonden"
-        ));
+        Event event = eventRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "evenement niet gevonden"));
         model.addAttribute("event", event);
         model.addAttribute("pageTitle", event.getTitle());
         return "event-details";
@@ -46,11 +43,7 @@ public class EventController {
 
 
     @PostMapping("/new")
-    public String saveNewEvent(
-            @Valid @ModelAttribute("event") Event event,
-            BindingResult bindingResult,
-            Model model
-    ) {
+    public String saveNewEvent(@Valid @ModelAttribute("event") Event event, BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
             model.addAttribute("pageTitle", "Nieuw evenement");
             model.addAttribute("locations", locationRepository.findAll());
